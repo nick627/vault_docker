@@ -1,0 +1,22 @@
+{
+  "listener": {
+    "tcp": {
+      "address":  "0.0.0.0:8200",
+      "tls_cert_file": "/vault/tls/cert.crt",
+      "tls_key_file": "/vault/tls/privkey.pem",
+      "tls_client_ca_file": "/vault/tls/chain.crt",
+      "tls_min_version": "tls12",
+      "tls_prefer_server_cipher_suites": "false",
+      "tls_disable": "false"
+    }
+  },
+  "backend": {
+    "file": {
+      "path": "/vault/file"
+    }
+  },
+  "default_lease_ttl": "168h",
+  "max_lease_ttl": "0h",
+  "api_addr": "https://0.0.0.0:8200",
+  "ui": true
+}

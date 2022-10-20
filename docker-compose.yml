@@ -1,0 +1,17 @@
+version: '3.5'
+
+services:
+
+  vault:
+    image: vault:latest
+    # image: vault:1.9.4
+    container_name: vault
+    env_file: .env
+    volumes:
+      - ./config:/vault/config
+      - ./tls:/vault/tls
+    ports:
+      - 8200:8200
+    cap_add:
+      - IPC_LOCK
+    command: vault server -config=/vault/config/vault.json

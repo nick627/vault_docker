@@ -1,0 +1,11 @@
+{
+  "policies": [
+    "allread"
+  ],
+  "meta": {
+    "user": "allread"
+  },
+  "ttl": "30m",
+  "num_uses": 10,
+  "renewable": true
+}
